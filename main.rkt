@@ -10,12 +10,6 @@
 (define-syntax-parser my-begin
   #:track-literals
 
-  [(_ func:local-function-definition rest:expr ...)
-   #'(splicing-let ([func.name
-                     (λ (func.args ...)
-                       func.body ...)])
-       (my-begin rest ...))]
-
   [(_ val:local-definition rest:expr ...)
    #'(splicing-let ([val.name val.value])
        (my-begin rest ...))]
