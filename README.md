@@ -15,10 +15,10 @@ This package allows you to write local definitions, scoped to the surrounding `b
 (count)   ;; => 1
 (count)   ;; => 2
 
-n         ;; doesn't work
+n         ;; error: n: unbound identifier
 ```
 
-This is syntactic sugar around `splicing-let` from `racket/splicing`:
+This is syntactic sugar around [`splicing-let`](https://docs.racket-lang.org/reference/splicing.html) from [`racket/splicing`](https://docs.racket-lang.org/reference/splicing.html):
 
 ```scheme
 (require racket/splicing)
@@ -39,14 +39,11 @@ Which is in turn similar to the let-over-lambda idiom:
       n)))
 ```
 
-You may also be interested in `define/memo` from `memoize`, depending
+You may also be interested in [`define/memo`](https://docs.racket-lang.org/memoize/index.html#%28form._%28%28lib._memoize%2Fmain..rkt%29._define%2Fmemo%29%29) from [`memoize`](https://docs.racket-lang.org/memoize/index.html), depending
 on your use case.
 
 ## Installation
 
-`raco pkg install https://github.com/plane/begin-with-local.git#main`
-
-## Bugs
-
-Works with `#lang racket/base`, but not `#lang racket` as that pulls 
-in `racket/local`.
+```sh
+raco pkg install https://github.com/plane/begin-with-local.git#main
+```
