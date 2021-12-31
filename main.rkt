@@ -20,10 +20,13 @@
    #'(splicing-let ([val.name val.value])
        (my-begin rest ...))]
 
-  [(_ e:expr rest:expr ...)
+  [(_ e:expr rest:expr ...+)
    #'(begin
        e
        (my-begin rest ...))]
+
+  [(_ e:expr)
+   #'e]
 
   [(_)
    #'(begin)])
