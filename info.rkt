@@ -7,6 +7,7 @@
 (define pkg-desc "Syntactic sugar for splicing-let")
 (define deps '("base"))
 (define build-deps '("racket-doc"
-                     "scribble-lib"))
+                     "scribble-lib"
+                     "rackunit-lib"))
 (define compile-omit-paths '("examples"))
 
