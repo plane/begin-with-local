@@ -45,3 +45,8 @@ on your use case.
 ## Installation
 
 `raco pkg install https://github.com/plane/begin-with-local.git#main`
+
+## Bugs
+
+Works with `#lang racket/base`, but not `#lang racket` as that pulls 
+in `racket/local`.
