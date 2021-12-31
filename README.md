@@ -15,7 +15,7 @@ This package allows you to write local definitions, scoped to the surrounding `b
 (count)   ;; => 1
 (count)   ;; => 2
 
-n         ;; doesn't work
+n         ;; error: n: unbound identifier
 ```
 
 This is syntactic sugar around [`splicing-let`](https://docs.racket-lang.org/reference/splicing.html) from [`racket/splicing`](https://docs.racket-lang.org/reference/splicing.html):
