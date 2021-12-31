@@ -1,20 +1,21 @@
 #lang racket/base
 
-(provide local-definition)
+(provide local-function-definition
+         local-definition)
 
 (require (for-syntax racket/base)
-         (for-template racket/base)
          syntax/parse)
+
+(define-syntax-class local-function-definition
+  #:description "Local function definition"
+  #:datum-literals (local)
+  (pattern
+   (local (name:id args:expr ...)
+     body:expr ...)))
 
 (define-syntax-class local-definition
   #:description "Local definition"
-  #:datum-literals (local)
+  #:datum-literals (local)  
+  (pattern
+   (local name:id value:expr)))
 
-  (pattern (local name:id value:expr))
-
-  (pattern (local (name:id args:expr ...)
-             body:expr ...)
-
-           #:attr value
-             #'(λ (args ...)
-                 body ...)))
