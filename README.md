@@ -42,3 +42,6 @@ Which is in turn similar to the let-over-lambda idiom:
 You may also be interested in `define/memo` from `memoize`, depending
 on your use case.
 
+## Installation
+
+`raco pkg install https://github.com/plane/begin-with-local.git#main`
