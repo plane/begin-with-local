@@ -39,3 +39,6 @@ Which is in turn similar to the let-over-lambda idiom:
       n)))
 ```
 
+You may also be interested in `define/memo` from `memoize`, depending
+on your use case.
+
