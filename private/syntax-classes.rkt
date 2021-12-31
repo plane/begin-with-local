@@ -3,6 +3,7 @@
 (provide local-definition)
 
 (require (for-syntax racket/base)
+         (for-template racket/base)
          syntax/parse)
 
 (define-syntax-class local-definition
