@@ -45,5 +45,5 @@ on your use case.
 ## Installation
 
 ```sh
-raco pkg install https://github.com/plane/begin-with-local.git#main
+raco pkg install begin-with-local
 ```
